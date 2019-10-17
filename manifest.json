@@ -1,0 +1,15 @@
+{
+  "name": "Aliexpress Product link",
+  "description": "Select links on Aliexpress and send them to certain website.",
+  "version": "0.1",
+  "minimum_chrome_version": "16.0.884",
+  "permissions": ["storage", "<all_urls>"],
+  "browser_action": {"default_popup": "popup.html"},
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["main.js"]
+    }
+  ]
+}

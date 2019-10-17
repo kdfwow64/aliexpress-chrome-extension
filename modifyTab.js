@@ -69,8 +69,8 @@ function cancelAction() {
 
 function submitAction() {
   var id = document.getElementById('myInput').getAttribute('data-id');
-  document.getElementById('loading-div').classList.remove("hide");
   if(id != "-1") {
+    document.getElementById('loading-div').classList.remove("hide");
     var request = new XMLHttpRequest();
   // document.getElementById('item-lists').value.split(",")[1].replace(/\r?\n|\r/g, "");
     request.open("POST", "http://164.132.58.235/api/v1/login", true);

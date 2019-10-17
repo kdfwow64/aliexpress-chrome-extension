@@ -1,3 +1,143 @@
 .selected-xiaomi {
 	border: 2px solid red;
 }
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+#xiaomi-content #loading-div {
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: -20px;
+    z-index: 9999999;
+    background: white;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#xiaomi-content #loading-div #loader {
+	border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+#xiaomi-content {
+	padding: 20px;
+	width: 300px;
+	height: 350px;
+	-webkit-box-shadow: 0px 0px 36px -6px rgba(0,0,0,0.69);
+	-moz-box-shadow: 0px 0px 36px -6px rgba(0,0,0,0.69);
+	box-shadow: 0px 0px 36px -6px rgba(0,0,0,0.69);
+	border: 3px solid black;
+	background-color: white;
+	position: absolute;
+    z-index: 9999;
+    right: 50px;
+}
+
+#xiaomi-content h3 {
+	margin-top: 0px;
+    margin-bottom: 10px;
+	text-align: center;
+}
+
+#xiaomi-content #myInput {
+    box-sizing: border-box;
+    /*background-image: url("https://www.w3schools.com/howto/searchicon.png");*/
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 14px;
+    padding: 5px 7px;
+    border: none;
+    width: 100%;
+    border: 1px solid black;
+}
+
+#xiaomi-content #myInput:focus {
+	border: 1px solid #ddd;
+}
+
+#xiaomi-content #myDropdown {
+  background-color: #f6f6f6;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+  margin-top: 10px;
+}
+
+#xiaomi-content #myDropdown a {
+  color: black;
+  padding: 10px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+#xiaomi-content #dropdown-options {
+	background-color: white;
+	border: 1px solid black;
+	z-index: 3;
+	position: absolute;
+	width: 254px;
+	max-height: 150px;
+	overflow-y: auto;
+	display: none;
+}
+
+#xiaomi-content .show {
+	display: block !important;
+}
+
+#xiaomi-content .hide {
+	display: none !important;
+}
+#xiaomi-content .warning-input {
+	border: 1px solid red !important;
+}
+#xiaomi-content #myDropdown a:hover {background-color: #ddd;}
+
+#xiaomi-content #item-lists {
+	min-height: 150px;
+	width: 254px;
+	min-width: 254px;
+	max-width: 254px;
+	margin-top: 20px;
+}
+
+#xiaomi-content .div-buttons {
+	margin-top: 20px;
+}
+
+#xiaomi-content .buttons {
+	border: 1px solid black;
+	width: 115px;
+	height: 30px;
+}
+
+#xiaomi-content .buttons:hover {
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+#xiaomi-content #submit {
+	background-color: black;
+	color: white;
+}
+
+#xiaomi-content #cancel {
+	margin-left: 20px;
+	background-color: white;
+	color: black;
+}
